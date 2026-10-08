@@ -1,0 +1,4 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { ContactBand, FleetCards, PageHero } from "@/components/site";
+export const Route=createFileRoute("/gallery")({head:()=>({meta:[{title:"Our Cab Gallery | Tirupati Cabs"},{name:"description",content:"View Mini, Sedan, SUV and Tempo Traveller vehicles available from Tirupati Cabs in Madurai."},{property:"og:title",content:"Tirupati Cabs Fleet Gallery"},{property:"og:description",content:"Explore vehicles for city rides, outstation trips and group travel."},{property:"og:type",content:"website"},{name:"twitter:card",content:"summary_large_image"}]}),component:Gallery});
+function Gallery(){return <><PageHero eyebrow="Our fleet" title="The right car for every journey." text="From agile city cars to spacious group travellers, choose comfort designed around your plans."/><section className="bg-surface py-20 lg:py-28"><div className="shell"><FleetCards/></div></section><ContactBand/></>}
