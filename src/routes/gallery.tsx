@@ -3,13 +3,13 @@ import { ContactBand, FleetCards, PageHero } from "@/components/site";
 export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
-      { title: "Our Cab Gallery | Tirupati Cabs" },
+      { title: "Our Cab Gallery | Elumalayan Cabs" },
       {
         name: "description",
         content:
-          "View Mini, Sedan, SUV and Tempo Traveller vehicles available from Tirupati Cabs in Madurai.",
+          "View Mini, Sedan, SUV and Tempo Traveller vehicles available from Elumalayan Cabs in Madurai.",
       },
-      { property: "og:title", content: "Tirupati Cabs Fleet Gallery" },
+      { property: "og:title", content: "Elumalayan Cabs Fleet Gallery" },
       {
         property: "og:description",
         content: "Explore vehicles for city rides, outstation trips and group travel.",

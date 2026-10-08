@@ -3,16 +3,16 @@ import { ContactBand, FleetCards, PageHero, TariffTables } from "@/components/si
 export const Route = createFileRoute("/tariff")({
   head: () => ({
     meta: [
-      { title: "Cab Tariffs in Madurai | Tirupati Cabs" },
+      { title: "Cab Tariffs in Madurai | Elumalayan Cabs" },
       {
         name: "description",
         content:
-          "View Tirupati Cabs local, day-rent and outstation cab fares for Mini, Sedan, SUV, Innova and Tempo Traveller.",
+          "View Elumalayan Cabs local, day-rent and outstation cab fares for Mini, Sedan, SUV, Innova and Tempo Traveller.",
       },
-      { property: "og:title", content: "Madurai Cab Tariffs | Tirupati Cabs" },
+      { property: "og:title", content: "Madurai Cab Tariffs | Elumalayan Cabs" },
       {
         property: "og:description",
-        content: "Clear local and outstation cab pricing from Tirupati Cabs.",
+        content: "Clear local and outstation cab pricing from Elumalayan Cabs.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

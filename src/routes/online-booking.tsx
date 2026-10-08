@@ -5,13 +5,13 @@ import { phone, whatsappUrl } from "@/lib/site-data";
 export const Route = createFileRoute("/online-booking")({
   head: () => ({
     meta: [
-      { title: "Book a Cab Online | Tirupati Cabs Madurai" },
+      { title: "Book a Cab Online | Elumalayan Cabs Madurai" },
       {
         name: "description",
         content:
-          "Send your Tirupati Cabs booking enquiry for local, one-way, round-trip or outstation travel.",
+          "Send your Elumalayan Cabs booking enquiry for local, one-way, round-trip or outstation travel.",
       },
-      { property: "og:title", content: "Book Tirupati Cabs Online" },
+      { property: "og:title", content: "Book Elumalayan Cabs Online" },
       {
         property: "og:description",
         content: "Share your trip details and receive a direct cab quote on WhatsApp.",

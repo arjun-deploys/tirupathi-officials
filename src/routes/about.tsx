@@ -5,13 +5,13 @@ import { ContactBand, PageHero, TrustGrid } from "@/components/site";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Tirupati Cabs | Trusted Madurai Taxi Service" },
+      { title: "About Elumalayan Cabs | Trusted Madurai Taxi Service" },
       {
         name: "description",
         content:
-          "Meet Tirupati Cabs, offering safe and affordable local, outstation and tour travel from Madurai.",
+          "Meet Elumalayan Cabs, offering safe and affordable local, outstation and tour travel from Madurai.",
       },
-      { property: "og:title", content: "About Tirupati Cabs" },
+      { property: "og:title", content: "About Elumalayan Cabs" },
       {
         property: "og:description",
         content: "Experienced drivers, thoughtful service and reliable rides from Madurai.",
@@ -48,19 +48,19 @@ function About() {
       <PageHero
         eyebrow="Our story"
         title="Madurai’s trusted travel companion."
-        text="From everyday city rides to long-distance family journeys, Tirupati Cabs puts reliability, comfort and care first."
+        text="From everyday city rides to long-distance family journeys, Elumalayan Cabs puts reliability, comfort and care first."
       />
       <section className="py-20 lg:py-28">
         <div className="shell grid gap-14 lg:grid-cols-2">
           <div>
-            <p className="eyebrow">About Tirupati Cabs</p>
+            <p className="eyebrow">About Elumalayan Cabs</p>
             <h2 className="mt-3 text-4xl font-bold">Every route. One standard of care.</h2>
           </div>
           <div className="space-y-5 text-sm leading-8 text-muted-foreground">
             <p>
-              Tirupati Cabs is a dedicated cab service in Madurai. We provide quality rides at fair
-              prices with experienced drivers who know the city, highways and destinations across
-              South India.
+              Elumalayan Cabs is a dedicated cab service in Madurai. We provide quality rides at
+              fair prices with experienced drivers who know the city, highways and destinations
+              across South India.
             </p>
             <p>
               Choose from local sightseeing, hourly rentals, outstation journeys, one-way travel,

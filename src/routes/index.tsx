@@ -17,13 +17,13 @@ import { phone } from "@/lib/site-data";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Tirupati Cabs | Premium Cab Service in Madurai" },
+      { title: "Elumalayan Cabs | Premium Cab Service in Madurai" },
       {
         name: "description",
         content:
-          "Book trusted local taxis, outstation cabs and South India tour packages with Tirupati Cabs in Madurai.",
+          "Book trusted local taxis, outstation cabs and South India tour packages with Elumalayan Cabs in Madurai.",
       },
-      { property: "og:title", content: "Tirupati Cabs | Premium Cab Service in Madurai" },
+      { property: "og:title", content: "Elumalayan Cabs | Premium Cab Service in Madurai" },
       {
         property: "og:description",
         content: "Premium local, outstation and tour cab service from Madurai, available 24/7.",
@@ -170,7 +170,7 @@ function Index() {
       <section className="bg-background py-20">
         <div className="shell">
           <div className="mb-10 text-center">
-            <p className="eyebrow">Why Tirupati Cabs</p>
+            <p className="eyebrow">Why Elumalayan Cabs</p>
             <h2 className="mt-3 text-4xl font-bold">Confidence in every ride</h2>
           </div>
           <TrustGrid />

@@ -1,11 +1,11 @@
-# Tirupati Cabs: Premium Rides
+# Elumalayan Cabs: Premium Rides
 
 https://gjrcabs.com/
-, I want to create a same exact web like this with my brand name : Tirupati Cabs, Above i Attached a logo of tirupati cabs, note : use exact all page web content from gjr cabs , like tariffs , tour packages , so as of now create a car animation website like a premium car completly dismandle and floated in the air , then reassemble the same position video loop running on H1 Section . and i want floatable whatsapp icon in the right side botton stick on. use this contact detais email : tirupaticabsmadurai@gmail.com, call us: 7373730488 , address: NO: 77, Tamil Sangam Road, Madurai Main, Madurai, Poondhotam, Tamil Nadu 625001. and use a car image of mini ,sedan, xuv , tempo traveller. , use this no on whatsapp : 7373730488. same us for call option , header bar starts with Logo and menus : home , about us , tariff, tour packages, online booking, gallery , contact us , book now. , i want this website looks premium & brand tonality
+, I want to create a same exact web like this with my brand name : Elumalayan Cabs, Above i Attached a logo of Elumalayan cabs, note : use exact all page web content from gjr cabs , like tariffs , tour packages , so as of now create a car animation website like a premium car completly dismandle and floated in the air , then reassemble the same position video loop running on H1 Section . and i want floatable whatsapp icon in the right side botton stick on. use this contact detais email : Elumalayancabsmadurai@gmail.com, call us: 7373730488 , address: NO: 77, Tamil Sangam Road, Madurai Main, Madurai, Poondhotam, Tamil Nadu 625001. and use a car image of mini ,sedan, xuv , tempo traveller. , use this no on whatsapp : 7373730488. same us for call option , header bar starts with Logo and menus : home , about us , tariff, tour packages, online booking, gallery , contact us , book now. , i want this website looks premium & brand tonality
 
 This project was built with [Lovable](https://lovable.dev).
 
-**Live app**: https://tirupati-cab-journeys.lovable.app
+**Live app**: https://Elumalayan-cab-journeys.lovable.app
 
 ## Build with Lovable
 

@@ -3,13 +3,13 @@ import { PackageGrid, PageHero, RouteStrip, ContactBand } from "@/components/sit
 export const Route = createFileRoute("/tour-packages")({
   head: () => ({
     meta: [
-      { title: "Tour Packages from Madurai | Tirupati Cabs" },
+      { title: "Tour Packages from Madurai | Elumalayan Cabs" },
       {
         name: "description",
         content:
           "Explore Tamil Nadu, Kerala, Karnataka, temple, hill station, honeymoon, family and wildlife tours from Madurai.",
       },
-      { property: "og:title", content: "South India Tour Packages | Tirupati Cabs" },
+      { property: "og:title", content: "South India Tour Packages | Elumalayan Cabs" },
       {
         property: "og:description",
         content: "Curated road journeys from Madurai with flexible cab and group travel options.",

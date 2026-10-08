@@ -67,8 +67,12 @@ export function SiteHeader() {
       </div>
       <header className="site-header">
         <div className="shell flex h-20 items-center justify-between gap-5">
-          <Link to="/" aria-label="Tirupati Cabs home">
-            <img src={logo} alt="Tirupati Cabs" className="h-17 w-36 object-contain object-left" />
+          <Link to="/" aria-label="Elumalayan Cabs home">
+            <img
+              src={logo}
+              alt="Elumalayan Cabs"
+              className="h-17 w-36 object-contain object-left"
+            />
           </Link>
           <nav className="hidden items-center gap-6 xl:flex">
             {nav.map(([label, to]) => (
@@ -110,7 +114,7 @@ export function SiteFooter() {
         <div>
           <img
             src={logo}
-            alt="Tirupati Cabs"
+            alt="Elumalayan Cabs"
             className="mb-5 h-24 w-52 rounded bg-background object-contain p-2"
           />
           <p className="max-w-sm text-sm leading-7 text-footer-muted">
@@ -160,7 +164,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="shell footer-bottom">
-        <span>© 2026 Tirupati Cabs. All rights reserved.</span>
+        <span>© 2026 Elumalayan Cabs. All rights reserved.</span>
         <span>Madurai · Tamil Nadu</span>
       </div>
     </footer>
@@ -171,7 +175,7 @@ export function WhatsAppFloat() {
   return (
     <a
       className="whatsapp-float"
-      href={`${whatsappUrl}?text=${encodeURIComponent("Hi, I would like to enquire about a Tirupati Cabs booking.")}`}
+      href={`${whatsappUrl}?text=${encodeURIComponent("Hi, I would like to enquire about a Elumalayan Cabs booking.")}`}
       target="_blank"
       rel="noreferrer"
       aria-label="Chat on WhatsApp"
@@ -337,7 +341,7 @@ export function BookingForm({ dark = false }: { dark?: boolean }) {
   function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    const message = `Hi Tirupati Cabs, I need a ${data.get("service")} cab.\nName: ${data.get("name")}\nPhone: ${data.get("phone")}\nFrom: ${data.get("from")}\nTo: ${data.get("to")}\nDate: ${data.get("date")}\nPassengers: ${data.get("passengers")}`;
+    const message = `Hi Elumalayan Cabs, I need a ${data.get("service")} cab.\nName: ${data.get("name")}\nPhone: ${data.get("phone")}\nFrom: ${data.get("from")}\nTo: ${data.get("to")}\nDate: ${data.get("date")}\nPassengers: ${data.get("passengers")}`;
     window.open(
       `${whatsappUrl}?text=${encodeURIComponent(message)}`,
       "_blank",

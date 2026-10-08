@@ -5,13 +5,13 @@ import { address, email, phone, whatsappUrl } from "@/lib/site-data";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact Tirupati Cabs | Madurai" },
+      { title: "Contact Elumalayan Cabs | Madurai" },
       {
         name: "description",
         content:
-          "Call, email or visit Tirupati Cabs at Tamil Sangam Road, Madurai for local and outstation cab bookings.",
+          "Call, email or visit Elumalayan Cabs at Tamil Sangam Road, Madurai for local and outstation cab bookings.",
       },
-      { property: "og:title", content: "Contact Tirupati Cabs" },
+      { property: "og:title", content: "Contact Elumalayan Cabs" },
       {
         property: "og:description",
         content: "Book a trusted cab in Madurai by phone, WhatsApp or online enquiry.",
@@ -63,7 +63,7 @@ function Contact() {
               availability and pricing directly.
             </p>
             <div className="mt-9 border-l-2 border-primary pl-5">
-              <strong className="block">Tirupati Cabs</strong>
+              <strong className="block">Elumalayan Cabs</strong>
               <span className="mt-2 block text-sm leading-6 text-muted-foreground">{address}</span>
             </div>
           </div>
