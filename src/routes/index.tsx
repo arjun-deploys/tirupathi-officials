@@ -12,7 +12,9 @@ import {
   TariffTables,
   TrustGrid,
 } from "@/components/site";
+
 import { phone } from "@/lib/site-data";
+import { TourHighlights } from "@/components/Tourhighlights";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -116,6 +118,7 @@ function Index() {
           <BookingForm />
         </div>
       </section>
+
       <section className="bg-surface py-20 lg:py-28">
         <div className="shell">
           <div className="mb-10 flex items-end justify-between gap-5">
@@ -151,7 +154,8 @@ function Index() {
           </Link>
         </div>
       </section>
-      <section className="bg-surface py-20 lg:py-28">
+      <TourHighlights />
+      <section className="bg-surface pb-20 pt-6 lg:pb-28 lg:pt-10">
         <div className="shell">
           <div className="mb-10 max-w-2xl">
             <p className="eyebrow">Across South India</p>
