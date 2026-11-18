@@ -14,6 +14,11 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteFooter, SiteHeader, WhatsAppFloat } from "../components/site";
 
+// ---- Tracking IDs ----
+const GTM_ID = "GTM-PJ5B6VH9";
+const GOOGLE_ADS_ID = "AW-18517382698";
+const GOOGLE_ADS_CONVERSION = "AW-18517382698/dKn4CMTQ6bodEKqs4_1E";
+
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -122,7 +127,47 @@ function RootShell({ children }: { children: ReactNode }) {
               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
               j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-PJ5B6VH9');
+              })(window,document,'script','dataLayer','${GTM_ID}');
+            `,
+          }}
+        />
+        {/* End Google Tag Manager */}
+
+        {/* Google tag (gtag.js) — Google Ads */}
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`} />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              window.gtag = gtag;
+              gtag('js', new Date());
+              gtag('config', '${GOOGLE_ADS_ID}');
+            `,
+          }}
+        />
+
+        {/* Event snippet for Contact conversion page */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.gtag_report_conversion = function (url) {
+                var navigated = false;
+                var callback = function () {
+                  if (navigated) return;
+                  navigated = true;
+                  if (typeof url !== 'undefined') {
+                    window.location = url;
+                  }
+                };
+                gtag('event', 'conversion', {
+                  'send_to': '${GOOGLE_ADS_CONVERSION}',
+                  'event_callback': callback
+                });
+                // Fallback: still navigate if the tag is blocked or slow
+                setTimeout(callback, 1000);
+                return false;
+              };
             `,
           }}
         />
@@ -131,12 +176,13 @@ function RootShell({ children }: { children: ReactNode }) {
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-PJ5B6VH9"
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
+        {/* End Google Tag Manager (noscript) */}
         {children}
         <Scripts />
       </body>
