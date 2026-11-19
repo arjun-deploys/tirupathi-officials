@@ -43,9 +43,13 @@ function NotFoundComponent() {
 
 function ErrorComponent({ error, reset }: ErrorComponentProps) {
   console.error(error);
+
   const router = useRouter();
+
   useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
+    reportLovableError(error, {
+      boundary: "tanstack_root_error_component",
+    });
   }, [error]);
 
   return (
@@ -79,12 +83,16 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
   );
 }
 
-export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
+export const Route = createRootRouteWithContext<{
+  queryClient: QueryClient;
+}>()({
   head: () => ({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Madurai Elumalayan Cabs — Premium Cab Service in Madurai" },
+      {
+        title: "Madurai Elumalayan Cabs — Premium Cab Service in Madurai",
+      },
       {
         name: "description",
         content: "24-hour local, outstation and tour cab service in Madurai.",
@@ -99,7 +107,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossOrigin: "anonymous",
+      },
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap",
@@ -107,6 +119,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "icon", href: "/favicon.png", type: "image/png" },
     ],
   }),
+
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
@@ -123,55 +136,68 @@ function RootShell({ children }: { children: ReactNode }) {
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              (function(w,d,s,l,i){
+                w[l]=w[l]||[];
+                w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+                var f=d.getElementsByTagName(s)[0],
+                    j=d.createElement(s),
+                    dl=l!='dataLayer'?'&l='+l:'';
+                j.async=true;
+                j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+                f.parentNode.insertBefore(j,f);
               })(window,document,'script','dataLayer','${GTM_ID}');
             `,
           }}
         />
-        {/* End Google Tag Manager */}
 
-        {/* Google tag (gtag.js) — Google Ads */}
+        {/* Google Ads - gtag.js */}
         <script async src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`} />
+
+        {/* Google Ads Configuration */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               window.gtag = gtag;
+
               gtag('js', new Date());
               gtag('config', '${GOOGLE_ADS_ID}');
             `,
           }}
         />
 
-        {/* Event snippet for Contact conversion page */}
+        {/* Google Ads Conversion Tracking */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              window.gtag_report_conversion = function (url) {
+              window.gtag_report_conversion = function(url) {
                 var navigated = false;
-                var callback = function () {
+
+                var callback = function() {
                   if (navigated) return;
                   navigated = true;
+
                   if (typeof url !== 'undefined') {
-                    window.location = url;
+                    window.location.href = url;
                   }
                 };
-                gtag('event', 'conversion', {
+
+                window.gtag('event', 'conversion', {
                   'send_to': '${GOOGLE_ADS_CONVERSION}',
                   'event_callback': callback
                 });
-                // Fallback: still navigate if the tag is blocked or slow
+
+                // Fallback navigation if tracking is blocked or delayed
                 setTimeout(callback, 1000);
+
                 return false;
               };
             `,
           }}
         />
       </head>
+
       <body>
         {/* Google Tag Manager (noscript) */}
         <noscript>
@@ -179,11 +205,15 @@ function RootShell({ children }: { children: ReactNode }) {
             src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
             height="0"
             width="0"
-            style={{ display: "none", visibility: "hidden" }}
+            style={{
+              display: "none",
+              visibility: "hidden",
+            }}
           />
         </noscript>
-        {/* End Google Tag Manager (noscript) */}
+
         {children}
+
         <Scripts />
       </body>
     </html>
@@ -196,9 +226,11 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <SiteHeader />
+
       <main>
         <Outlet />
       </main>
+
       <SiteFooter />
       <WhatsAppFloat />
     </QueryClientProvider>
