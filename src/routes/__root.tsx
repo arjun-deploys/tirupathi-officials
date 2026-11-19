@@ -15,7 +15,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteFooter, SiteHeader, WhatsAppFloat } from "../components/site";
 
 // ---- Tracking IDs ----
-const GTM_ID = "GTM-PJ5B6VH9";
+const GTM_ID = "GTM-PTV9HTXW";
 const GOOGLE_ADS_ID = "AW-18517382698";
 const GOOGLE_ADS_CONVERSION = "AW-18517382698/dKn4CMTQ6bodEKqs4_1E";
 
